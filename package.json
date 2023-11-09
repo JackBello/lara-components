@@ -1,0 +1,28 @@
+{
+  "name": "lara-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+        "import": "./dist/lara-components.es.js",
+        "require": "./dist/lara-components.umd.js"
+    }
+  },
+  "main": "./dist/lara-components.umd.js",
+  "module": "./dist/lara-components.es.js",
+  "types": "./dist/index.d.ts"
+}
